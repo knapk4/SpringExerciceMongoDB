@@ -1,0 +1,80 @@
+### Bonne requete pour remplir la table ingredient
+POST http://localhost:8080/ingredients
+Content-Type: application/json
+
+{
+  "name": "Pomme"
+}
+
+### Bonne requete pour remplir la table ingredient
+POST http://localhost:8080/ingredients
+Content-Type: application/json
+
+{
+  "name": "Tarte"
+}
+
+### Bonne requete pour remplir la table ingredientQuantite
+POST http://localhost:8080/ingredientQuantites
+Content-Type: application/json
+
+{
+  "quantite": 5,
+  "ingredient": {
+    "id": 1,
+    "name": "Pomme"
+  }
+}
+
+### Bonne requete pour remplir la table ingredientQuantite
+POST http://localhost:8080/ingredientQuantites
+Content-Type: application/json
+
+{
+  "quantite": 1,
+  "ingredient": {
+    "id": 2,
+    "name": "Tarte"
+  }
+}
+
+### Bonne requete pour remplir la table categorie
+POST http://localhost:8080/categories
+Content-Type: application/json
+
+{
+  "name": "Desserts"
+}
+
+### Bonne requete pour remplir la table recette_ingrediantQuantite
+POST http://localhost:8080/recettes
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Tarte aux pommes",
+  "description": "Une tarte aux pommes",
+  "ingredientQuantite": [
+    {
+      "id": 1,
+      "quantite": 5,
+      "ingredient": {
+        "id": 1,
+        "name": "Pomme"
+      }
+    },
+    {
+      "id": 2,
+      "quantite": 1,
+      "ingredient": {
+        "id": 2,
+        "name": "Tarte"
+      }
+    }
+  ],
+  "categorie": [
+    {
+      "id": 1
+    }
+  ]
+}
